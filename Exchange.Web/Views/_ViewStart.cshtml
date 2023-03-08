@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "_Layout";
+}
+@*@{
+    Layout = "_Layoutiskender";
+}
+*@
+@*@{
+    var routeUrl = ViewContext.RouteData.Values["Index"].ToString();
+    var pages = new List<string> { "Home/..", "PersonalData/.." };
+
+    if (pages.Any(routeUrl.Contains))
+    {
+        Layout = "_Layoutiskender";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+}*@

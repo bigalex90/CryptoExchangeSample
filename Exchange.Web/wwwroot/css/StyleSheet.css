@@ -1,0 +1,103 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    background: url(hayvanlar/kurt.jpg);
+    overflow: hidden;
+    background-size: cover;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    background: lightblue;
+    width: 200px;
+    height: 100%;
+    transition: 0.4s;
+}
+
+.active {
+    left: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 25px 0;
+}
+
+    ul li {
+        list-style: none;
+    }
+
+        ul li a {
+            padding: 15px 20px;
+            color: black;
+            display: block;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0,0,0,0.7);
+        }
+
+            ul li a:hover {
+                background: rgba(0,0,0,0.6);
+                color: white;
+            }
+
+.sidebarBtn {
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: #f5f5f5;
+    border: none;
+    outline: none;
+}
+
+    .sidebarBtn span {
+        display: block;
+        width: 28px;
+        height: 2px;
+        background: #262626;
+        position: absolute;
+        top: 19px;
+        transition: 0.4s;
+    }
+
+        .sidebarBtn span:before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #262626;
+            transition: 0.4s;
+        }
+
+        .sidebarBtn span:after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #262626;
+            transition: 0.4s;
+        }
+
+    .sidebarBtn.toggle span {
+        background: transparent;
+    }
+
+        .sidebarBtn.toggle span:before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        .sidebarBtn.toggle span:after {
+            top: 0;
+            transform: rotate(-45deg);
+        }

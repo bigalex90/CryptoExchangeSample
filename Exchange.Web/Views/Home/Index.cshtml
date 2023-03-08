@@ -1,0 +1,21 @@
+﻿@using Exchange.Core.Models;
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model CurrencyResultModel
+<div class="text-center">
+    <h1 class="display-4">Welcome to CryptoExchange Sample</h1>
+    <div class="row justify-content-center">
+    @foreach (var item in Model.result)
+        {
+            <div class="card col-3 mb-2 m-2 align-content-center">
+                <div class="card-header">@item.code</div>
+                <label class="card-body">@item.price</label>
+                <div class="card-footer">Price Change: %@item.changeHour</div>
+            </div>
+        }   
+    </div>
+</div>
+
+
+
